@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-node-fetch/node-fetch/lib/body.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-node-fetch/node_modules/node-fetch/lib/body.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-node-fetch">npmtest-node-fetch (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-node-fetch/node-fetch/lib/body.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-node-fetch/node_modules/node-fetch/lib/body.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.62% <small>(13 / 103)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-node-fetch/node-fetch/lib/</a> » body.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-node-fetch/node_modules/node-fetch/lib/</a> &#187; body.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -755,16 +757,16 @@ module.exports = Body;
  * @param   Object  opts  Response options
  * @return  Void
  */
-<span class="fstat-no" title="function not covered">function Body(body, opts) {</span>
+<span class="fstat-no" title="function not covered" >function Body(body, opts) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	opts = opts || {};</span>
+<span class="cstat-no" title="statement not covered" >	opts = opts || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	this.body = body;</span>
-<span class="cstat-no" title="statement not covered">	this.bodyUsed = false;</span>
-<span class="cstat-no" title="statement not covered">	this.size = opts.size || 0;</span>
-<span class="cstat-no" title="statement not covered">	this.timeout = opts.timeout || 0;</span>
-<span class="cstat-no" title="statement not covered">	this._raw = [];</span>
-<span class="cstat-no" title="statement not covered">	this._abort = false;</span>
+<span class="cstat-no" title="statement not covered" >	this.body = body;</span>
+<span class="cstat-no" title="statement not covered" >	this.bodyUsed = false;</span>
+<span class="cstat-no" title="statement not covered" >	this.size = opts.size || 0;</span>
+<span class="cstat-no" title="statement not covered" >	this.timeout = opts.timeout || 0;</span>
+<span class="cstat-no" title="statement not covered" >	this._raw = [];</span>
+<span class="cstat-no" title="statement not covered" >	this._abort = false;</span>
 &nbsp;
 }
 &nbsp;
@@ -773,15 +775,15 @@ module.exports = Body;
  *
  * @return  Promise
  */
-Body.prototype.json = <span class="fstat-no" title="function not covered">function() {</span>
+Body.prototype.json = <span class="fstat-no" title="function not covered" >function() {</span>
 &nbsp;
 	// for 204 No Content response, buffer will be empty, parsing it will throw error
-<span class="cstat-no" title="statement not covered">	if (this.status === 204) {</span>
-<span class="cstat-no" title="statement not covered">		return Body.Promise.resolve({});</span>
+<span class="cstat-no" title="statement not covered" >	if (this.status === 204) {</span>
+<span class="cstat-no" title="statement not covered" >		return Body.Promise.resolve({});</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return this._decode().then(<span class="fstat-no" title="function not covered">function(buffer) {</span></span>
-<span class="cstat-no" title="statement not covered">		return JSON.parse(buffer.toString());</span>
+<span class="cstat-no" title="statement not covered" >	return this._decode().then(<span class="fstat-no" title="function not covered" >function(buffer) {</span></span>
+<span class="cstat-no" title="statement not covered" >		return JSON.parse(buffer.toString());</span>
 	});
 &nbsp;
 };
@@ -791,10 +793,10 @@ Body.prototype.json = <span class="fstat-no" title="function not covered">functi
  *
  * @return  Promise
  */
-Body.prototype.text = <span class="fstat-no" title="function not covered">function() {</span>
+Body.prototype.text = <span class="fstat-no" title="function not covered" >function() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return this._decode().then(<span class="fstat-no" title="function not covered">function(buffer) {</span></span>
-<span class="cstat-no" title="statement not covered">		return buffer.toString();</span>
+<span class="cstat-no" title="statement not covered" >	return this._decode().then(<span class="fstat-no" title="function not covered" >function(buffer) {</span></span>
+<span class="cstat-no" title="statement not covered" >		return buffer.toString();</span>
 	});
 &nbsp;
 };
@@ -804,9 +806,9 @@ Body.prototype.text = <span class="fstat-no" title="function not covered">functi
  *
  * @return  Promise
  */
-Body.prototype.buffer = <span class="fstat-no" title="function not covered">function() {</span>
+Body.prototype.buffer = <span class="fstat-no" title="function not covered" >function() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return this._decode();</span>
+<span class="cstat-no" title="statement not covered" >	return this._decode();</span>
 &nbsp;
 };
 &nbsp;
@@ -815,72 +817,72 @@ Body.prototype.buffer = <span class="fstat-no" title="function not covered">func
  *
  * @return  Promise
  */
-Body.prototype._decode = <span class="fstat-no" title="function not covered">function() {</span>
+Body.prototype._decode = <span class="fstat-no" title="function not covered" >function() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var self = this;</span>
+<span class="cstat-no" title="statement not covered" >	var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (this.bodyUsed) {</span>
-<span class="cstat-no" title="statement not covered">		return Body.Promise.reject(new Error('body used already for: ' + this.url));</span>
+<span class="cstat-no" title="statement not covered" >	if (this.bodyUsed) {</span>
+<span class="cstat-no" title="statement not covered" >		return Body.Promise.reject(new Error('body used already for: ' + this.url));</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	this.bodyUsed = true;</span>
-<span class="cstat-no" title="statement not covered">	this._bytes = 0;</span>
-<span class="cstat-no" title="statement not covered">	this._abort = false;</span>
-<span class="cstat-no" title="statement not covered">	this._raw = [];</span>
+<span class="cstat-no" title="statement not covered" >	this.bodyUsed = true;</span>
+<span class="cstat-no" title="statement not covered" >	this._bytes = 0;</span>
+<span class="cstat-no" title="statement not covered" >	this._abort = false;</span>
+<span class="cstat-no" title="statement not covered" >	this._raw = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return new Body.Promise(<span class="fstat-no" title="function not covered">function(resolve, reject) {</span></span>
-<span class="cstat-no" title="statement not covered">		var resTimeout;</span>
+<span class="cstat-no" title="statement not covered" >	return new Body.Promise(<span class="fstat-no" title="function not covered" >function(resolve, reject) {</span></span>
+<span class="cstat-no" title="statement not covered" >		var resTimeout;</span>
 &nbsp;
 		// body is string
-<span class="cstat-no" title="statement not covered">		if (typeof self.body === 'string') {</span>
-<span class="cstat-no" title="statement not covered">			self._bytes = self.body.length;</span>
-<span class="cstat-no" title="statement not covered">			self._raw = [new Buffer(self.body)];</span>
-<span class="cstat-no" title="statement not covered">			return resolve(self._convert());</span>
+<span class="cstat-no" title="statement not covered" >		if (typeof self.body === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >			self._bytes = self.body.length;</span>
+<span class="cstat-no" title="statement not covered" >			self._raw = [new Buffer(self.body)];</span>
+<span class="cstat-no" title="statement not covered" >			return resolve(self._convert());</span>
 		}
 &nbsp;
 		// body is buffer
-<span class="cstat-no" title="statement not covered">		if (self.body instanceof Buffer) {</span>
-<span class="cstat-no" title="statement not covered">			self._bytes = self.body.length;</span>
-<span class="cstat-no" title="statement not covered">			self._raw = [self.body];</span>
-<span class="cstat-no" title="statement not covered">			return resolve(self._convert());</span>
+<span class="cstat-no" title="statement not covered" >		if (self.body instanceof Buffer) {</span>
+<span class="cstat-no" title="statement not covered" >			self._bytes = self.body.length;</span>
+<span class="cstat-no" title="statement not covered" >			self._raw = [self.body];</span>
+<span class="cstat-no" title="statement not covered" >			return resolve(self._convert());</span>
 		}
 &nbsp;
 		// allow timeout on slow response body
-<span class="cstat-no" title="statement not covered">		if (self.timeout) {</span>
-<span class="cstat-no" title="statement not covered">			resTimeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">				self._abort = true;</span>
-<span class="cstat-no" title="statement not covered">				reject(new FetchError('response timeout at ' + self.url + ' over limit: ' + self.timeout, 'body-timeout'));</span>
+<span class="cstat-no" title="statement not covered" >		if (self.timeout) {</span>
+<span class="cstat-no" title="statement not covered" >			resTimeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >				self._abort = true;</span>
+<span class="cstat-no" title="statement not covered" >				reject(new FetchError('response timeout at ' + self.url + ' over limit: ' + self.timeout, 'body-timeout'));</span>
 			}, self.timeout);
 		}
 &nbsp;
 		// handle stream error, such as incorrect content-encoding
-<span class="cstat-no" title="statement not covered">		self.body.on('error', <span class="fstat-no" title="function not covered">function(err) {</span></span>
-<span class="cstat-no" title="statement not covered">			reject(new FetchError('invalid response body at: ' + self.url + ' reason: ' + err.message, 'system', err));</span>
+<span class="cstat-no" title="statement not covered" >		self.body.on('error', <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >			reject(new FetchError('invalid response body at: ' + self.url + ' reason: ' + err.message, 'system', err));</span>
 		});
 &nbsp;
 		// body is stream
-<span class="cstat-no" title="statement not covered">		self.body.on('data', <span class="fstat-no" title="function not covered">function(chunk) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (self._abort || chunk === null) {</span>
-<span class="cstat-no" title="statement not covered">				return;</span>
+<span class="cstat-no" title="statement not covered" >		self.body.on('data', <span class="fstat-no" title="function not covered" >function(chunk) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (self._abort || chunk === null) {</span>
+<span class="cstat-no" title="statement not covered" >				return;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			if (self.size &amp;&amp; self._bytes + chunk.length &gt; self.size) {</span>
-<span class="cstat-no" title="statement not covered">				self._abort = true;</span>
-<span class="cstat-no" title="statement not covered">				reject(new FetchError('content size at ' + self.url + ' over limit: ' + self.size, 'max-size'));</span>
-<span class="cstat-no" title="statement not covered">				return;</span>
+<span class="cstat-no" title="statement not covered" >			if (self.size &amp;&amp; self._bytes + chunk.length &gt; self.size) {</span>
+<span class="cstat-no" title="statement not covered" >				self._abort = true;</span>
+<span class="cstat-no" title="statement not covered" >				reject(new FetchError('content size at ' + self.url + ' over limit: ' + self.size, 'max-size'));</span>
+<span class="cstat-no" title="statement not covered" >				return;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			self._bytes += chunk.length;</span>
-<span class="cstat-no" title="statement not covered">			self._raw.push(chunk);</span>
+<span class="cstat-no" title="statement not covered" >			self._bytes += chunk.length;</span>
+<span class="cstat-no" title="statement not covered" >			self._raw.push(chunk);</span>
 		});
 &nbsp;
-<span class="cstat-no" title="statement not covered">		self.body.on('end', <span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">			if (self._abort) {</span>
-<span class="cstat-no" title="statement not covered">				return;</span>
+<span class="cstat-no" title="statement not covered" >		self.body.on('end', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (self._abort) {</span>
+<span class="cstat-no" title="statement not covered" >				return;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			clearTimeout(resTimeout);</span>
-<span class="cstat-no" title="statement not covered">			resolve(self._convert());</span>
+<span class="cstat-no" title="statement not covered" >			clearTimeout(resTimeout);</span>
+<span class="cstat-no" title="statement not covered" >			resolve(self._convert());</span>
 		});
 	});
 &nbsp;
@@ -893,67 +895,67 @@ Body.prototype._decode = <span class="fstat-no" title="function not covered">fun
  * @param   String  encoding  Target encoding
  * @return  String
  */
-Body.prototype._convert = <span class="fstat-no" title="function not covered">function(encoding) {</span>
+Body.prototype._convert = <span class="fstat-no" title="function not covered" >function(encoding) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	encoding = encoding || 'utf-8';</span>
+<span class="cstat-no" title="statement not covered" >	encoding = encoding || 'utf-8';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var ct = this.headers.get('content-type');</span>
-<span class="cstat-no" title="statement not covered">	var charset = 'utf-8';</span>
-<span class="cstat-no" title="statement not covered">	var res, str;</span>
+<span class="cstat-no" title="statement not covered" >	var ct = this.headers.get('content-type');</span>
+<span class="cstat-no" title="statement not covered" >	var charset = 'utf-8';</span>
+<span class="cstat-no" title="statement not covered" >	var res, str;</span>
 &nbsp;
 	// header
-<span class="cstat-no" title="statement not covered">	if (ct) {</span>
+<span class="cstat-no" title="statement not covered" >	if (ct) {</span>
 		// skip encoding detection altogether if not html/xml/plain text
-<span class="cstat-no" title="statement not covered">		if (!/text\/html|text\/plain|\+xml|\/xml/i.test(ct)) {</span>
-<span class="cstat-no" title="statement not covered">			return Buffer.concat(this._raw);</span>
+<span class="cstat-no" title="statement not covered" >		if (!/text\/html|text\/plain|\+xml|\/xml/i.test(ct)) {</span>
+<span class="cstat-no" title="statement not covered" >			return Buffer.concat(this._raw);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		res = /charset=([^;]*)/i.exec(ct);</span>
+<span class="cstat-no" title="statement not covered" >		res = /charset=([^;]*)/i.exec(ct);</span>
 	}
 &nbsp;
 	// no charset in content type, peek at response body for at most 1024 bytes
-<span class="cstat-no" title="statement not covered">	if (!res &amp;&amp; this._raw.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">		for (var i = 0; i &lt; this._raw.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">			str += this._raw[i].toString()</span>
-<span class="cstat-no" title="statement not covered">			if (str.length &gt; 1024) {</span>
-<span class="cstat-no" title="statement not covered">				break;</span>
+<span class="cstat-no" title="statement not covered" >	if (!res &amp;&amp; this._raw.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >		for (var i = 0; i &lt; this._raw.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >			str += this._raw[i].toString()</span>
+<span class="cstat-no" title="statement not covered" >			if (str.length &gt; 1024) {</span>
+<span class="cstat-no" title="statement not covered" >				break;</span>
 			}
 		}
-<span class="cstat-no" title="statement not covered">		str = str.substr(0, 1024);</span>
+<span class="cstat-no" title="statement not covered" >		str = str.substr(0, 1024);</span>
 	}
 &nbsp;
 	// html5
-<span class="cstat-no" title="statement not covered">	if (!res &amp;&amp; str) {</span>
-<span class="cstat-no" title="statement not covered">		res = /&lt;meta.+?charset=(['"])(.+?)\1/i.exec(str);</span>
+<span class="cstat-no" title="statement not covered" >	if (!res &amp;&amp; str) {</span>
+<span class="cstat-no" title="statement not covered" >		res = /&lt;meta.+?charset=(['"])(.+?)\1/i.exec(str);</span>
 	}
 &nbsp;
 	// html4
-<span class="cstat-no" title="statement not covered">	if (!res &amp;&amp; str) {</span>
-<span class="cstat-no" title="statement not covered">		res = /&lt;meta[\s]+?http-equiv=(['"])content-type\1[\s]+?content=(['"])(.+?)\2/i.exec(str);</span>
+<span class="cstat-no" title="statement not covered" >	if (!res &amp;&amp; str) {</span>
+<span class="cstat-no" title="statement not covered" >		res = /&lt;meta[\s]+?http-equiv=(['"])content-type\1[\s]+?content=(['"])(.+?)\2/i.exec(str);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (res) {</span>
-<span class="cstat-no" title="statement not covered">			res = /charset=(.*)/i.exec(res.pop());</span>
+<span class="cstat-no" title="statement not covered" >		if (res) {</span>
+<span class="cstat-no" title="statement not covered" >			res = /charset=(.*)/i.exec(res.pop());</span>
 		}
 	}
 &nbsp;
 	// xml
-<span class="cstat-no" title="statement not covered">	if (!res &amp;&amp; str) {</span>
-<span class="cstat-no" title="statement not covered">		res = /&lt;\?xml.+?encoding=(['"])(.+?)\1/i.exec(str);</span>
+<span class="cstat-no" title="statement not covered" >	if (!res &amp;&amp; str) {</span>
+<span class="cstat-no" title="statement not covered" >		res = /&lt;\?xml.+?encoding=(['"])(.+?)\1/i.exec(str);</span>
 	}
 &nbsp;
 	// found charset
-<span class="cstat-no" title="statement not covered">	if (res) {</span>
-<span class="cstat-no" title="statement not covered">		charset = res.pop();</span>
+<span class="cstat-no" title="statement not covered" >	if (res) {</span>
+<span class="cstat-no" title="statement not covered" >		charset = res.pop();</span>
 &nbsp;
 		// prevent decode issues when sites use incorrect encoding
 		// ref: https://hsivonen.fi/encoding-menu/
-<span class="cstat-no" title="statement not covered">		if (charset === 'gb2312' || charset === 'gbk') {</span>
-<span class="cstat-no" title="statement not covered">			charset = 'gb18030';</span>
+<span class="cstat-no" title="statement not covered" >		if (charset === 'gb2312' || charset === 'gbk') {</span>
+<span class="cstat-no" title="statement not covered" >			charset = 'gb18030';</span>
 		}
 	}
 &nbsp;
 	// turn raw buffers into a single utf-8 buffer
-<span class="cstat-no" title="statement not covered">	return convert(</span>
+<span class="cstat-no" title="statement not covered" >	return convert(</span>
 		Buffer.concat(this._raw)
 		, encoding
 		, charset
@@ -967,40 +969,39 @@ Body.prototype._convert = <span class="fstat-no" title="function not covered">fu
  * @param   Mixed  instance  Response or Request instance
  * @return  Mixed
  */
-Body.prototype._clone = <span class="fstat-no" title="function not covered">function(instance) {</span>
-<span class="cstat-no" title="statement not covered">	var p1, p2;</span>
-<span class="cstat-no" title="statement not covered">	var body = instance.body;</span>
+Body.prototype._clone = <span class="fstat-no" title="function not covered" >function(instance) {</span>
+<span class="cstat-no" title="statement not covered" >	var p1, p2;</span>
+<span class="cstat-no" title="statement not covered" >	var body = instance.body;</span>
 &nbsp;
 	// don't allow cloning a used body
-<span class="cstat-no" title="statement not covered">	if (instance.bodyUsed) {</span>
-<span class="cstat-no" title="statement not covered">		throw new Error('cannot clone body after it is used');</span>
+<span class="cstat-no" title="statement not covered" >	if (instance.bodyUsed) {</span>
+<span class="cstat-no" title="statement not covered" >		throw new Error('cannot clone body after it is used');</span>
 	}
 &nbsp;
 	// check that body is a stream and not form-data object
 	// note: we can't clone the form-data object without having it as a dependency
-<span class="cstat-no" title="statement not covered">	if (bodyStream(body) &amp;&amp; typeof body.getBoundary !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >	if (bodyStream(body) &amp;&amp; typeof body.getBoundary !== 'function') {</span>
 		// tee instance body
-<span class="cstat-no" title="statement not covered">		p1 = new PassThrough();</span>
-<span class="cstat-no" title="statement not covered">		p2 = new PassThrough();</span>
-<span class="cstat-no" title="statement not covered">		body.pipe(p1);</span>
-<span class="cstat-no" title="statement not covered">		body.pipe(p2);</span>
+<span class="cstat-no" title="statement not covered" >		p1 = new PassThrough();</span>
+<span class="cstat-no" title="statement not covered" >		p2 = new PassThrough();</span>
+<span class="cstat-no" title="statement not covered" >		body.pipe(p1);</span>
+<span class="cstat-no" title="statement not covered" >		body.pipe(p2);</span>
 		// set instance body to teed body and return the other teed body
-<span class="cstat-no" title="statement not covered">		instance.body = p1;</span>
-<span class="cstat-no" title="statement not covered">		body = p2;</span>
+<span class="cstat-no" title="statement not covered" >		instance.body = p1;</span>
+<span class="cstat-no" title="statement not covered" >		body = p2;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return body;</span>
+<span class="cstat-no" title="statement not covered" >	return body;</span>
 }
 &nbsp;
 // expose Promise
 Body.Promise = global.Promise;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:00:40 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:16:45 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
