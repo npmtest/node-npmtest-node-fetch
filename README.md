@@ -1,4 +1,7 @@
-# test coverage for  [node-fetch (v1.6.3)](https://github.com/bitinn/node-fetch)  [![npm package](https://img.shields.io/npm/v/npmtest-node-fetch.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-node-fetch) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-node-fetch.svg)](https://travis-ci.org/npmtest/node-npmtest-node-fetch)
+# npmtest-node-fetch
+
+#### basic test coverage for  [node-fetch (v1.6.3)](https://github.com/bitinn/node-fetch)  [![npm package](https://img.shields.io/npm/v/npmtest-node-fetch.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-node-fetch) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-node-fetch.svg)](https://travis-ci.org/npmtest/node-npmtest-node-fetch)
+
 #### A light-weight module that brings window.fetch to node.js and io.js
 
 [![NPM](https://nodei.co/npm/node-fetch.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-fetch)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-node-fetch/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-node-fetch/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-node-fetch/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-node-fetch/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-node-fetch/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-node-fetch/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-node-fetch/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-node-fetch/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-node-fetch/build/test-report.html](https://npmtest.github.io/node-npmtest-node-fetch/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-node-fetch/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-node-fetch/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-node-fetch/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-node-fetch/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-node-fetch/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-fetch/build/apidoc.html)
 
